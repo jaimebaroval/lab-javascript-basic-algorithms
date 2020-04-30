@@ -54,13 +54,12 @@ const palindrome = "A man, a plan, a canal, Panama!";
 let rigthDirectionPalindrome = "";
 let reversedDirectionPalindrome = "";
 for (let i = 0; i < palindrome.length; i++) {
-    if (palindrome[i] === "," || palindrome[i] === " " || palindrome[i] === "!" || palindrome[i] === "?") {
-        continue;
-    } else {
+    if (palindrome[i] != "," && palindrome[i] != " " && palindrome[i] != "!" && palindrome[i] != "?") {
         rigthDirectionPalindrome += palindrome[i];
         reversedDirectionPalindrome = palindrome[i] + reversedDirectionPalindrome;
     }
 }
+
 const lowerCasedRigthDirectionPalindrome = rigthDirectionPalindrome.toLowerCase();
 const lowerCasedReversedDirectionPalindrome = reversedDirectionPalindrome.toLowerCase();
 if (lowerCasedRigthDirectionPalindrome == lowerCasedReversedDirectionPalindrome) {
