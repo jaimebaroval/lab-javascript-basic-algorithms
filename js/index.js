@@ -48,3 +48,21 @@ console.log(`Palabras: ${wordsCount + 1}`);
 console.log(`Palabras Split ${loremIpsum.split(' ').length}`)
 const etNum = loremIpsum.match(/ et /gi)
 console.log(`Numero de ‘et’ en el texto: ${etNum.length}`);
+
+//Bonus2
+const palindrome = "A man, a plan, a canal, Panama!";
+let rigthDirectionPalindrome = "";
+let reversedDirectionPalindrome = "";
+for (let i = 0; i < palindrome.length; i++) {
+    if (palindrome[i] === "," || palindrome[i] === " " || palindrome[i] === "!" || palindrome[i] === "?") {
+        continue;
+    } else {
+        rigthDirectionPalindrome += palindrome[i];
+        reversedDirectionPalindrome = palindrome[i] + reversedDirectionPalindrome;
+    }
+}
+const lowerCasedRigthDirectionPalindrome = rigthDirectionPalindrome.toLowerCase();
+const lowerCasedReversedDirectionPalindrome = reversedDirectionPalindrome.toLowerCase();
+if (lowerCasedRigthDirectionPalindrome == lowerCasedReversedDirectionPalindrome) {
+    console.log("It is a palindrome")
+}
